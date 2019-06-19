@@ -15,9 +15,9 @@ public class EmployeeHandler {
         return repository.getEmployee();
     }
 
-    public void createEmployee(final Employee employee){
-        repository.createEmployee(employee);
-        updatedEmployee = employee;
+    public Employee createEmployee(final Employee employee){
+        final Employee savedEmployee = repository.createEmployee(employee);
+        return savedEmployee;
     }
 
     public void updateEmployee(final Employee employee){

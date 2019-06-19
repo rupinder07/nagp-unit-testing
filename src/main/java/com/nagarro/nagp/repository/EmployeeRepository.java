@@ -9,10 +9,11 @@ public class EmployeeRepository {
         return new Employee("1", "NAGP");
     }
 
-    public void createEmployee(final Employee employee) {
+    public Employee createEmployee(final Employee employee) {
         if(employee == null){
             throw new InvalidRequestException("Employee must not be null");
         }
         System.out.println("Employee saved");
+        return employee;
     }
 }
