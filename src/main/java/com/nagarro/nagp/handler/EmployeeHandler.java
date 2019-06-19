@@ -2,12 +2,17 @@ package com.nagarro.nagp.handler;
 
 import com.nagarro.nagp.domain.Employee;
 import com.nagarro.nagp.repository.EmployeeRepository;
+import com.nagarro.nagp.repository.EmployeeRepositoryImpl;
 
 public class EmployeeHandler {
 
     //shared variable
 
-    private final EmployeeRepository repository = new EmployeeRepository();
+    private EmployeeRepository repository;
+
+    public EmployeeHandler(final EmployeeRepository repository){
+        this.repository = repository;
+    }
 
     private static Employee updatedEmployee;
 
